@@ -1,18 +1,22 @@
-import machine
-import time
+from machine import *
+import utime
 
-LED_PIN = 2 # D4
-BUTTON_PIN = 13 # D5
+# Servo on p18
+d2 = PWM(Pin(18), freq=50, duty=0)
 
-def blink():
-    led = machine.Pin(LED_PIN, machine.Pin.OUT)
-    button = machine.Pin(BUTTON_PIN, machine.Pin.IN, machine.Pin.PULL_UP)
+def setServoAngle(pin, angle):
+  if (angle >= 0 and angle <= 180):
+    pin.duty(int(0.025*1023 + (angle*0.1*1023)/180))
+  else:
+    raise ValueError("Servomotor angle have to be set between 0 and 180")
 
-    while button.value():
-        led.on()
-        time.sleep(0.5)
-        led.off()
-        time.sleep(0.5)
-    led.off()
+angel = 0
 
-blink()
+while True:
+  for angel in range(91):
+    setServoAngle(d2, angel)
+    utime.sleep_ms(1)
+    continue
+  for angel in range(91, -1, -1):
+    setServoAngle(d2, angel)
+    utime.sleep_ms(1)
