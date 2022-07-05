@@ -1,4 +1,5 @@
 # This example demonstrates a peripheral implementing the Nordic UART Service (NUS).
+# https://github.com/micropython/micropython/blob/master/examples/bluetooth/ble_uart_peripheral.py
 
 import bluetooth
 from ble_advertising import advertising_payload
