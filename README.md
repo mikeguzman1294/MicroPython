@@ -1,13 +1,15 @@
 # Micropython for ESP32
 
-## Interactive Pikachu Proyect
+## Micropython Development Environment Setup
+*This tutorial assumes that a distribution of Python 3 is installed in a local computer. If not installed, download the latest version through this link <https://www.python.org/downloads/>*
+
 *The set of command line instructions is intended to run in a Windows machine*
 ***
-### **1. Set-up Python Virtual Environment**
+### **1. Create and Launch Python Virtual Environment**
 
 **1.1**
 
-In order to manage the required Pyhton libraries for this project it is recommended to create a Python virtual environment in the project's root folder.
+In order to manage the required Python libraries for this project it is recommended to create a Python virtual environment in the project's root folder.
 
 This step should only be done once after cloning the project's repository!
 
@@ -35,7 +37,7 @@ This step should only be done once after cloning the project's repository as wel
 Step documetation:
 <https://stackoverflow.com/questions/63932002/unable-to-clone-python-venv-to-another-pc>
 
-### **2. Flash Controller Board**
+### **2. Flash ESP32 Controller Board**
 
 First we need to flash the Micropython firmware to the board.
 
@@ -49,7 +51,7 @@ esptool.py erase_flash
 esptool.py --chip esp32 --port COM3 --baud 460800 write_flash -z 0x1000 Firmware\esp32-20210902-v1.17.bin
 ```
 
-### **3. Interact with Board**
+### **3. Interact with ESP32 Board**
 
 **3.1 Connect to board**
 
