@@ -9,4 +9,4 @@ Once in App Inventor you need to import the 2 Bluetooth extensions located in th
 
 The app's screen looks like this:
 
-![Screen](App_Screen.jpg)
+![Screen](App_Screen.JPG)
