@@ -42,7 +42,7 @@ Step documetation:
 First we need to flash the Micropython firmware to the board.
 
 In order to do this, first erase the microcontroller's flash memory.
-Next, program the bin file contained in the Firmware rlative path.
+Next, program the bin file contained in the Firmware relative path.
 
 The required set of command line instructions for this is the following (make sure venv is active):
 ```
